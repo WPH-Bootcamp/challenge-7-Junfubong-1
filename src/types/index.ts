@@ -1,128 +1,77 @@
-/**
- * Type Definitions
- *
- * File ini berisi semua TypeScript interfaces dan types yang digunakan
- * di berbagai tempat dalam aplikasi.
- *
- * Best Practices:
- * - Gunakan PascalCase untuk interface names
- * - Export semua interfaces agar bisa digunakan di file lain
- * - Group related interfaces bersama
- * - Add comments untuk explain complex types
- */
+// Tambahkan tipe baru untuk portofolio
+export interface PortfolioItem {
+  id: number;
+  title: string;
+  subtitle: string;
+  image: string;
+}
 
-// ==========================================
-// UI Component Types
-// ==========================================
 
-/**
- * Button variant types
- * Gunakan ini untuk Button component
- */
-export type ButtonVariant = 'primary' | 'secondary' | 'outline';
 
-/**
- * Example: Button Props
- * Uncomment dan sesuaikan dengan kebutuhan
- */
-// export interface ButtonProps {
-//   variant?: ButtonVariant;
-//   children: React.ReactNode;
-//   onClick?: () => void;
-//   className?: string;
-//   disabled?: boolean;
-// }
+// Tambahkan tipe baru untuk industri
+export interface Industry {
+  id: number;
+  name: string;
+  description: string;
+  image: string;
+}
 
-// ==========================================
-// Section Data Types
-// ==========================================
 
-/**
- * TODO: Define interfaces untuk data yang digunakan di sections
- *
- * Contoh:
- * - ServiceItem untuk services section
- * - TeamMember untuk team section
- * - Testimonial untuk testimonials section
- * - dll.
- */
+// Tambahkan tipe baru untuk layanan
 
-/**
- * Example: Service/Product Item
- */
-// export interface ServiceItem {
-//   id: number;
-//   title: string;
-//   description: string;
-//   icon?: string;
-//   image?: string;
-// }
 
-/**
- * Example: Team Member
- */
-// export interface TeamMember {
-//   id: number;
-//   name: string;
-//   position: string;
-//   bio?: string;
-//   image: string;
-//   socialLinks?: {
-//     linkedin?: string;
-//     twitter?: string;
-//     github?: string;
-//   };
-// }
+export interface Service {
+  id: number;
+  title: string;
+  description: string;
+  icon: string;
+}
 
-/**
- * Example: Testimonial
- */
-// export interface Testimonial {
-//   id: number;
-//   name: string;
-//   position: string;
-//   company: string;
-//   message: string;
-//   avatar?: string;
-//   rating?: number;
-// }
+// Tambahkan tipe baru untuk langkah proses
+export interface ProcessStep {
+  id: number;
+  title: string;
+  description: string;
+}
 
-// ==========================================
-// Navigation Types
-// ==========================================
+// Tipe yang sudah ada sebelumnya
+export interface NavLink {
+  label: string;
+  path: string;
+}
 
-/**
- * Navigation menu item
- */
-// export interface NavItem {
-//   label: string;
-//   href: string;
-//   external?: boolean;
-// }
+export interface Brand {
+  name: string;
+  logo: string;
+}
 
-// ==========================================
-// Form Types (if needed)
-// ==========================================
+export interface StatItem {
+  value: string;
+  label: string;
+}
 
-/**
- * Contact form data
- */
-// export interface ContactFormData {
-//   name: string;
-//   email: string;
-//   message: string;
-// }
 
-// ==========================================
-// TODO: Add more types as needed!
-// ==========================================
+// Tambahkan tipe baru untuk testimoni
+export interface Testimonial {
+  id: number;
+  quote: string;
+  name: string;
+  position: string;
+  rating: number;
+  avatar: string;
+}
 
-/**
- * Tips:
- * 1. Define types berdasarkan data yang kamu perlukan
- * 2. Lihat design Figma untuk understand data structure
- * 3. Make types reusable across components
- * 4. Use optional properties (?) untuk data yang tidak selalu ada
- * 5. Consider creating separate files jika types terlalu banyak
- *    Example: types/components.ts, types/data.ts, etc.
- */
+// Tambahkan tipe baru untuk FAQ
+export interface FAQItem {
+  id: number;
+  question: string;
+  answer: string;
+  isOpen: boolean;
+}
+// Tambahkan tipe untuk layanan pada formulir kontak
+export interface ContactFormData {
+  name: string;
+  email: string;
+  message: string;
+  services: string[];
+}

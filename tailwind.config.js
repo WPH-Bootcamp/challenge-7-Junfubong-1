@@ -12,16 +12,19 @@ export default {
       // TODO: Extract colors dari Figma design
       // Lihat color palette di Figma dan add here
       colors: {
-        // Example:
-        // primary: {
-        //   50: '#...',
-        //   100: '#...',
-        //   // ... more shades
-        //   900: '#...',
-        // },
-        // secondary: '#...',
-        // accent: '#...',
-        // Add your custom colors here based on Figma design
+        dark: "#0A0A0F",
+        darker: "#050508",
+        accent: "#FF6B35",
+        "accent-light": "#FF8A5C",
+        gray: {
+          100: "#F8F9FA",
+          200: "#E9ECEF",
+          400: "#9CA3AF",
+          600: "#6C757D",
+          700: "#374151",
+          800: "#1F2937",
+          900: "#121218"
+        }
       },
 
       // ==========================================
@@ -32,6 +35,8 @@ export default {
         // Example:
         // sans: ['Inter', 'sans-serif'],
         // heading: ['Poppins', 'sans-serif'],
+       sans: ["Inter", "system-ui", "sans-serif"],
+
       },
 
       fontSize: {
